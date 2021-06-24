@@ -1,0 +1,201 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Fonts/Montserrat/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/UI/Root/UI_Settings.cs" type="Script" id=2]
+[ext_resource path="res://Scripts/UI/Buttons/UI_Settings_Buttons.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/QuickRulesPopup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://icons/back/outline_arrow_back_black_pressed_24dp.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=6]
+size = 33
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=9]
+size = 33
+font_data = ExtResource( 6 )
+
+[node name="UI_Settings" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 480.0
+margin_bottom = 720.0
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+margin_left = 88.0
+margin_top = 129.122
+margin_right = 394.0
+margin_bottom = 313.122
+custom_constants/separation = 81
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer_Music" type="HBoxContainer" parent="UI/VBoxContainer"]
+margin_right = 306.0
+margin_bottom = 50.0
+custom_constants/separation = 70
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/VSplitContainer_Music"]
+margin_right = 136.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "MUSIC"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Music" type="CheckButton" parent="UI/VBoxContainer/VSplitContainer_Music"]
+margin_left = 206.0
+margin_right = 306.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+focus_mode = 0
+pressed = true
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VSplitContainer_SFX" type="HBoxContainer" parent="UI/VBoxContainer"]
+margin_top = 131.0
+margin_right = 306.0
+margin_bottom = 181.0
+custom_constants/separation = 153
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/VSplitContainer_SFX"]
+margin_right = 76.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "SFX"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SFX" type="CheckButton" parent="UI/VBoxContainer/VSplitContainer_SFX"]
+margin_left = 229.0
+margin_right = 305.0
+margin_bottom = 50.0
+focus_mode = 0
+pressed = true
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackButton" type="TextureButton" parent="UI"]
+margin_left = 8.0
+margin_top = 48.0
+margin_right = 120.0
+margin_bottom = 104.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuickRulesButton" type="Button" parent="UI"]
+margin_left = 112.0
+margin_top = 440.0
+margin_right = 370.0
+margin_bottom = 496.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "QUICK RULES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsButton" type="Button" parent="UI"]
+margin_left = 112.0
+margin_top = 536.0
+margin_right = 368.0
+margin_bottom = 592.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "CREDITS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuickRulesPopup" parent="UI" instance=ExtResource( 4 )]
+[connection signal="pressed" from="UI/VBoxContainer/VSplitContainer_Music/Music" to="UI" method="_on_Music_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/VSplitContainer_SFX/SFX" to="UI" method="_on_SFX_pressed"]
+[connection signal="pressed" from="UI/BackButton" to="UI" method="_on_BackButton_pressed"]
+[connection signal="pressed" from="UI/QuickRulesButton" to="UI" method="_on_QuickRulesButton_pressed"]
+[connection signal="pressed" from="UI/CreditsButton" to="UI" method="_on_CreditsButton_pressed"]

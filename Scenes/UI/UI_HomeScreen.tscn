@@ -1,0 +1,216 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Fonts/Khula/Khula-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/UI/Root/UI_HomeScreen.cs" type="Script" id=2]
+[ext_resource path="res://Scripts/UI/Buttons/UI_Homescreen_Buttons.gd" type="Script" id=3]
+[ext_resource path="res://icons/cog/outline_settings_black_24dp.png" type="Texture" id=4]
+[ext_resource path="res://icons/leaderboard/outline_leaderboard_black_24dp.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scenes/ExitGamePopup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://icons/cog/outline_settings_black_pressed_24dp.png" type="Texture" id=8]
+[ext_resource path="res://icons/leaderboard/outline_leaderboard_black_pressed_24dp.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 2
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=7]
+size = 45
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="UI_HomeScreen" type="Control"]
+anchor_right = 2.0
+anchor_bottom = 2.0
+margin_right = -480.0
+margin_bottom = -720.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.05176e-05
+margin_bottom = 6.10352e-05
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 0.97
+margin_right = -4.19998
+margin_bottom = -1.13678
+rect_min_size = Vector2( 480, 720 )
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NullifyLogo" type="Label" parent="UI"]
+margin_left = 33.2963
+margin_top = 106.786
+margin_right = 449.296
+margin_bottom = 267.786
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "NULLIFY"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start_menu" type="Control" parent="UI"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainerUpper" type="VBoxContainer" parent="UI/Start_menu"]
+margin_left = 120.0
+margin_top = 232.0
+margin_right = 364.0
+margin_bottom = 752.0
+rect_min_size = Vector2( 200, 247 )
+rect_scale = Vector2( 1, 0.8 )
+custom_constants/separation = 62
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="UI/Start_menu/VBoxContainerUpper"]
+margin_top = 48.0
+margin_right = 244.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 210, 100 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "PLAY"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tutorial" type="Button" parent="UI/Start_menu/VBoxContainerUpper"]
+margin_top = 210.0
+margin_right = 244.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 210, 100 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "TUTORIAL"
+
+[node name="login" type="Button" parent="UI/Start_menu/VBoxContainerUpper"]
+margin_top = 372.0
+margin_right = 244.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 210, 100 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "LOG IN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainerLower" type="HBoxContainer" parent="UI/Start_menu"]
+margin_left = 5.0
+margin_top = 18.551
+margin_right = 465.0
+margin_bottom = 74.551
+rect_min_size = Vector2( 0, 56 )
+custom_constants/separation = 264
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leaderboard" type="TextureButton" parent="UI/Start_menu/HBoxContainerLower"]
+margin_left = 16.0
+margin_right = 106.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 90, 56 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="TextureButton" parent="UI/Start_menu/HBoxContainerLower"]
+margin_left = 370.0
+margin_right = 460.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 90, 56 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ExitGamePopup" parent="UI" instance=ExtResource( 7 )]
+[connection signal="pressed" from="UI/Start_menu/VBoxContainerUpper/Play" to="UI/Start_menu" method="_on_Play_pressed"]
+[connection signal="pressed" from="UI/Start_menu/VBoxContainerUpper/Tutorial" to="UI/Start_menu" method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="UI/Start_menu/VBoxContainerUpper/login" to="UI/Start_menu" method="_on_login_pressed"]
+[connection signal="pressed" from="UI/Start_menu/HBoxContainerLower/Leaderboard" to="UI/Start_menu" method="_on_Leaderboard_pressed"]
+[connection signal="pressed" from="UI/Start_menu/HBoxContainerLower/Settings" to="UI/Start_menu" method="_on_Settings_pressed"]

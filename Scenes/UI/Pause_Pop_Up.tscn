@@ -1,0 +1,254 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Fonts/Montserrat/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Pause_Pop_Up.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/QuickRulesPopup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icons/exit/outline_close_black_24dp.png" type="Texture" id=4]
+[ext_resource path="res://icons/home/outline_home_black_24dp.png" type="Texture" id=5]
+[ext_resource path="res://icons/help/outline_help_outline_black_24dp.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/ARIALN.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://icons/help/outline_help_outline_black_pressed_24dp.png" type="Texture" id=9]
+[ext_resource path="res://icons/home/outline_home_black_pressed_24dp.png" type="Texture" id=10]
+[ext_resource path="res://icons/exit/outline_close_black_pressed_24dp.png" type="Texture" id=11]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.937255, 0.670588, 0.670588, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=2]
+size = 37
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 37
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 52
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.937255, 0.670588, 0.670588, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=6]
+size = 33
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=9]
+size = 29
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Pause_Pop_Up" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+margin_left = 48.0
+margin_top = 104.0
+margin_right = 433.0
+margin_bottom = 499.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="PopupDialog"]
+
+[node name="VSplitContainer" type="HBoxContainer" parent="PopupDialog/Node2D"]
+margin_left = 72.0
+margin_top = 112.0
+margin_right = 317.0
+margin_bottom = 163.0
+custom_constants/separation = 56
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PopupDialog/Node2D/VSplitContainer"]
+margin_right = 113.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MUSIC"
+align = 1
+
+[node name="Music_slider" type="CheckButton" parent="PopupDialog/Node2D/VSplitContainer"]
+margin_left = 169.0
+margin_right = 245.0
+margin_bottom = 51.0
+pressed = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VSplitContainer2" type="HBoxContainer" parent="PopupDialog/Node2D"]
+margin_left = 72.0
+margin_top = 208.0
+margin_right = 318.0
+margin_bottom = 259.0
+custom_constants/separation = 110
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PopupDialog/Node2D/VSplitContainer2"]
+margin_right = 60.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SFX"
+align = 1
+
+[node name="SFX_Slider" type="CheckButton" parent="PopupDialog/Node2D/VSplitContainer2"]
+margin_left = 170.0
+margin_right = 246.0
+margin_bottom = 51.0
+pressed = true
+
+[node name="Close" type="TextureButton" parent="PopupDialog/Node2D"]
+margin_left = 328.0
+margin_top = 13.65
+margin_right = 376.0
+margin_bottom = 61.65
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Home" type="TextureButton" parent="PopupDialog/Node2D"]
+margin_left = 72.0
+margin_top = 325.65
+margin_right = 124.0
+margin_bottom = 375.65
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 10 )
+
+[node name="How_To" type="TextureButton" parent="PopupDialog/Node2D"]
+margin_left = 272.0
+margin_top = 325.65
+margin_right = 320.0
+margin_bottom = 375.65
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="PopupDialog"]
+modulate = Color( 0.0509804, 0.0352941, 0.0352941, 1 )
+margin_left = 100.0
+margin_top = 14.0
+margin_right = 294.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 4 )
+text = "Paused"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupDialog2" type="PopupDialog" parent="."]
+margin_left = 48.0
+margin_top = 104.0
+margin_right = 440.0
+margin_bottom = 499.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PopupDialog2"]
+margin_left = 56.0
+margin_top = 86.0
+margin_right = 335.0
+margin_bottom = 171.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "All progress will be lost
+Quit?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="No" type="Button" parent="PopupDialog2"]
+margin_left = 43.0
+margin_top = 255.0
+margin_right = 176.0
+margin_bottom = 322.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "NOT YET"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Yes" type="Button" parent="PopupDialog2"]
+margin_left = 227.0
+margin_top = 255.0
+margin_right = 363.0
+margin_bottom = 319.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "YEP"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="QuickRulesPopup" parent="." instance=ExtResource( 3 )]
+[connection signal="pressed" from="PopupDialog/Node2D/VSplitContainer/Music_slider" to="." method="_on_Music_slider_pressed"]
+[connection signal="pressed" from="PopupDialog/Node2D/VSplitContainer2/SFX_Slider" to="." method="_on_SFX_Slider_pressed"]
+[connection signal="pressed" from="PopupDialog/Node2D/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="PopupDialog/Node2D/Home" to="." method="_on_Home_pressed"]
+[connection signal="pressed" from="PopupDialog/Node2D/How_To" to="." method="_on_How_To_pressed"]
+[connection signal="pressed" from="PopupDialog2/No" to="." method="_on_No_pressed"]
+[connection signal="pressed" from="PopupDialog2/Yes" to="." method="_on_Yes_pressed"]

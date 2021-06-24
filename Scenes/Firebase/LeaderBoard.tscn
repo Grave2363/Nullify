@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/LeaderBoard.gd" type="Script" id=3]
+[ext_resource path="res://icons/cog/outline_settings_black_24dp.png" type="Texture" id=4]
+[ext_resource path="res://icons/cog/outline_settings_black_pressed_24dp.png" type="Texture" id=5]
+[ext_resource path="res://icons/back/outline_arrow_back_black_pressed_24dp.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 2 )
+
+[node name="TopScores" type="Control"]
+anchor_right = 2.01
+anchor_bottom = 1.998
+margin_right = -484.8
+margin_bottom = -718.56
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 0.97
+margin_bottom = 21.6
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NullifyLogo" type="Label" parent="UI"]
+margin_left = 43.8572
+margin_top = 93.9385
+margin_right = 451.857
+margin_bottom = 148.938
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Best Scores"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI"]
+margin_left = 27.0
+margin_top = 162.0
+margin_right = 479.0
+margin_bottom = 702.0
+follow_focus = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreContainer" type="VBoxContainer" parent="UI/ScrollContainer"]
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start_menu" type="Control" parent="UI"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainerLower" type="HBoxContainer" parent="UI/Start_menu"]
+margin_left = 13.6614
+margin_top = 21.1476
+margin_right = 473.661
+margin_bottom = 77.1476
+rect_min_size = Vector2( 460, 56 )
+custom_constants/separation = 264
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="UI/Start_menu/HBoxContainerLower"]
+margin_left = 21.0
+margin_right = 107.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 86, 56 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="TextureButton" parent="UI/Start_menu/HBoxContainerLower"]
+margin_left = 371.0
+margin_right = 460.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 89, 56 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="UI/Start_menu/HBoxContainerLower/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="UI/Start_menu/HBoxContainerLower/Settings" to="." method="_on_Settings_pressed"]

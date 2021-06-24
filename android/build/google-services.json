@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "6899328201",
+    "project_id": "nullify-46cff",
+    "storage_bucket": "nullify-46cff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6899328201:android:98b2cbb53c3ff5cfe21918",
+        "android_client_info": {
+          "package_name": "com.godot.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6899328201-viq63voamk14dmrtu2otpumtm5mlat7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgCr7Cb0ebZvjAEG4R0Evvgw23p86umGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6899328201-viq63voamk14dmrtu2otpumtm5mlat7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

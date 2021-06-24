@@ -1,0 +1,155 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Fonts/Montserrat/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/QuickRulesPopup.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/ARIALN.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=4]
+[ext_resource path="res://icons/forward/outline_arrow_forward_black_24dp.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.937255, 0.670588, 0.670588, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 27
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[node name="QuickRulesPopup" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Popup" type="PopupDialog" parent="."]
+margin_left = 48.0
+margin_top = 106.0
+margin_right = 433.0
+margin_bottom = 501.0
+rect_min_size = Vector2( 385, 395 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.937255, 0.670588, 0.670588, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Popup/ColorRect"]
+margin_left = 8.0
+margin_top = 62.0
+margin_right = 376.0
+margin_bottom = 206.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RulesText" type="Label" parent="Popup/ColorRect/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LoremIpsum"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prevButton" type="TextureButton" parent="Popup/ColorRect/Panel"]
+margin_left = 8.0
+margin_top = 166.0
+margin_right = 56.0
+margin_bottom = 214.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nextButton" type="TextureButton" parent="Popup/ColorRect/Panel"]
+margin_left = 320.0
+margin_top = 166.0
+margin_right = 368.0
+margin_bottom = 214.0
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PaginationLabel" type="Label" parent="Popup/ColorRect/Panel"]
+margin_left = 168.0
+margin_top = 8.0
+margin_right = 208.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoneButton" type="Button" parent="Popup"]
+margin_left = 128.0
+margin_top = 278.0
+margin_right = 264.0
+margin_bottom = 340.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+text = "GOT IT!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Popup"]
+margin_left = 104.0
+margin_top = 14.0
+margin_right = 293.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "QUICK RULES"
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Popup/ColorRect/Panel/prevButton" to="." method="_on_prevButton_pressed"]
+[connection signal="pressed" from="Popup/ColorRect/Panel/nextButton" to="." method="_on_nextButton_pressed"]
+[connection signal="pressed" from="Popup/DoneButton" to="." method="_on_DoneButton_pressed"]

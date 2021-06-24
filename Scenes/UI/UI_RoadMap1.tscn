@@ -1,0 +1,495 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Fonts/BRADHITC.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/UI/Buttons/UI_RoadMap1_Buttons.gd" type="Script" id=2]
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Montserrat/Montserrat-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://icons/back/outline_arrow_back_black_pressed_24dp.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0.768627, 0.690196, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.768627, 0.690196, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=12]
+size = 25
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=15]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=17]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=19]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=21]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=23]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=25]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.917647, 0.85098, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="UI_RoadMap1" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 480.0
+margin_bottom = 720.0
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MenuLabel" type="Label" parent="Background"]
+margin_left = 128.0
+margin_top = 72.0
+margin_right = 373.0
+margin_bottom = 129.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "ROADMAP 1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorldLabel" type="Label" parent="Background"]
+visible = false
+margin_left = 168.0
+margin_top = 88.0
+margin_right = 352.0
+margin_bottom = 138.0
+custom_fonts/font = SubResource( 2 )
+text = "World 1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Levels" type="Node2D" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "These buttons lines are drawn and its color's alpha changes upon completions"
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Levels"]
+margin_left = 40.0
+margin_top = 157.5
+margin_right = 444.0
+margin_bottom = 257.5
+custom_constants/separation = 52
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1" type="Button" parent="Levels/HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 1"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Leve2" type="Button" parent="Levels/HBoxContainer"]
+margin_left = 152.0
+margin_right = 252.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 2"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Level3" type="Button" parent="Levels/HBoxContainer"]
+margin_left = 304.0
+margin_right = 404.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 3"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Levels"]
+margin_left = 40.0
+margin_top = 304.0
+margin_right = 444.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 100, 100 )
+custom_constants/separation = 52
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level4" type="Button" parent="Levels/HBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 4"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Level5" type="Button" parent="Levels/HBoxContainer2"]
+margin_left = 152.0
+margin_right = 252.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 5"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Level6" type="Button" parent="Levels/HBoxContainer2"]
+margin_left = 304.0
+margin_right = 404.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 6"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Levels"]
+margin_left = 40.0
+margin_top = 454.75
+margin_right = 444.0
+margin_bottom = 554.75
+custom_constants/separation = 52
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level7" type="Button" parent="Levels/HBoxContainer3"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 7"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Level8" type="Button" parent="Levels/HBoxContainer3"]
+margin_left = 152.0
+margin_right = 252.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 8"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Level9" type="Button" parent="Levels/HBoxContainer3"]
+margin_left = 304.0
+margin_right = 404.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Level 9"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BossLevel" type="Button" parent="Levels"]
+margin_left = 192.0
+margin_top = 600.0
+margin_right = 292.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 25 )
+custom_styles/normal = SubResource( 26 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.976471, 0.976471, 0.976471, 0.819608 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Boss"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="Levels"]
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 112.0
+margin_bottom = 88.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Levels/HBoxContainer/Level1" to="Levels" method="_on_Level1_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer/Leve2" to="Levels" method="_on_Leve2_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer/Level3" to="Levels" method="_on_Level3_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer2/Level4" to="Levels" method="_on_Level4_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer2/Level5" to="Levels" method="_on_Level5_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer2/Level6" to="Levels" method="_on_Level6_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer3/Level7" to="Levels" method="_on_Level7_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer3/Level8" to="Levels" method="_on_Level8_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer3/Level9" to="Levels" method="_on_Level9_pressed"]
+[connection signal="pressed" from="Levels/BossLevel" to="Levels" method="_on_BossLevel_pressed"]
+[connection signal="pressed" from="Levels/BackButton" to="Levels" method="_on_BackButton_pressed"]

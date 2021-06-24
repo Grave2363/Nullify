@@ -1,0 +1,310 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/LeaderBoard_Selection.gd" type="Script" id=3]
+[ext_resource path="res://icons/cog/outline_settings_black_24dp.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/Montserrat/Montserrat-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://icons/back/outline_arrow_back_black_pressed_24dp.png" type="Texture" id=6]
+[ext_resource path="res://icons/cog/outline_settings_black_pressed_24dp.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=4]
+size = 27
+font_data = ExtResource( 2 )
+
+[node name="TopScoresSelection" type="Control"]
+anchor_right = 2.01
+anchor_bottom = 1.998
+margin_right = -484.8
+margin_bottom = -718.56
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 0.97
+margin_bottom = 21.6
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NullifyLogo" type="Label" parent="UI"]
+margin_left = 31.8284
+margin_top = 98.4959
+margin_right = 450.828
+margin_bottom = 153.496
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Leaderboard Levels"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/NullifyLogo"]
+margin_left = 92.0
+margin_top = 97.0
+margin_right = 326.0
+margin_bottom = 553.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="selection_container" type="VBoxContainer" parent="UI/NullifyLogo/ScrollContainer"]
+margin_right = 216.0
+margin_bottom = 877.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="5x5" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_right = 216.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "5x5"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="6x6" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 70.0
+margin_right = 216.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "6x6"
+
+[node name="8x8" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 140.0
+margin_right = 216.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "8x8"
+
+[node name="01" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 210.0
+margin_right = 216.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 1"
+
+[node name="02" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 280.0
+margin_right = 216.0
+margin_bottom = 330.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 2"
+
+[node name="03" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 350.0
+margin_right = 216.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 3"
+
+[node name="04" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 420.0
+margin_right = 216.0
+margin_bottom = 470.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 4"
+
+[node name="05" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 490.0
+margin_right = 216.0
+margin_bottom = 527.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 5"
+
+[node name="06" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 547.0
+margin_right = 216.0
+margin_bottom = 597.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 6"
+
+[node name="07" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 617.0
+margin_right = 216.0
+margin_bottom = 667.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 7"
+
+[node name="08" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 687.0
+margin_right = 216.0
+margin_bottom = 737.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 8"
+
+[node name="09" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 757.0
+margin_right = 216.0
+margin_bottom = 807.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - 9"
+
+[node name="10" type="Button" parent="UI/NullifyLogo/ScrollContainer/selection_container"]
+margin_top = 827.0
+margin_right = 216.0
+margin_bottom = 877.0
+rect_min_size = Vector2( 216, 50 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "RoadMap - Boss"
+
+[node name="Start_menu" type="Control" parent="UI"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainerLower" type="HBoxContainer" parent="UI/Start_menu"]
+margin_left = 13.6614
+margin_top = 25.0591
+margin_right = 475.661
+margin_bottom = 81.0591
+rect_min_size = Vector2( 460, 56 )
+custom_constants/separation = 284
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="UI/Start_menu/HBoxContainerLower"]
+margin_right = 89.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 89, 56 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="TextureButton" parent="UI/Start_menu/HBoxContainerLower"]
+margin_left = 373.0
+margin_right = 462.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 89, 56 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/5x5" to="." method="_on_5x5_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/6x6" to="." method="_on_6x6_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/8x8" to="." method="_on_8x8_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/01" to="." method="_on_01_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/02" to="." method="_on_02_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/03" to="." method="_on_03_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/04" to="." method="_on_04_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/05" to="." method="_on_05_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/06" to="." method="_on_06_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/07" to="." method="_on_07_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/08" to="." method="_on_08_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/09" to="." method="_on_09_pressed"]
+[connection signal="pressed" from="UI/NullifyLogo/ScrollContainer/selection_container/10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="UI/Start_menu/HBoxContainerLower/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="UI/Start_menu/HBoxContainerLower/Settings" to="." method="_on_Settings_pressed"]

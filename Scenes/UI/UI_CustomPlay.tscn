@@ -1,0 +1,265 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Fonts/Montserrat/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/UI/Buttons/UI_CustomPlay_Buttons.gd" type="Script" id=2]
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/ARIALN.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://icons/back/outline_arrow_back_black_pressed_24dp.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Bold.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.47451, 0.278431, 0.521569, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=5]
+size = 45
+outline_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 5 )
+
+[node name="UI_CustomPlay" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_left = -2.24487
+margin_right = 480.0
+margin_bottom = 720.0
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="UI"]
+margin_left = 88.0
+margin_top = 80.0
+margin_right = 386.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "CUSTOM PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option1" type="Node2D" parent="UI"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Option1"]
+margin_left = 48.0
+margin_top = 160.0
+margin_right = 199.0
+margin_bottom = 225.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/Option1/VBoxContainer"]
+margin_right = 158.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Number of Players"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerNum" type="LineEdit" parent="UI/Option1/VBoxContainer"]
+margin_top = 46.0
+margin_right = 158.0
+margin_bottom = 70.0
+hint_tooltip = "Enter Value Here"
+
+[node name="Option2" type="Node2D" parent="UI"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Option2"]
+margin_left = 288.0
+margin_top = 160.0
+margin_right = 432.0
+margin_bottom = 242.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/Option2/VBoxContainer"]
+margin_right = 144.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Max Player Value"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxPlayerValue" type="LineEdit" parent="UI/Option2/VBoxContainer"]
+margin_top = 46.0
+margin_right = 144.0
+margin_bottom = 70.0
+hint_tooltip = "Enter Value Here"
+
+[node name="Option3" type="Node2D" parent="UI"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Option3"]
+margin_left = 48.0
+margin_top = 256.0
+margin_right = 128.0
+margin_bottom = 344.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/Option3/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Map Size "
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MapSize" type="LineEdit" parent="UI/Option3/VBoxContainer"]
+margin_top = 46.0
+margin_right = 80.0
+margin_bottom = 70.0
+hint_tooltip = "Enter Value Here"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Option4" type="Node2D" parent="UI"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Option4"]
+margin_left = 280.0
+margin_top = 256.0
+margin_right = 448.0
+margin_bottom = 355.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/Option4/VBoxContainer"]
+margin_right = 168.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Number of Imminent Tiles"
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ImmenentTileNum" type="LineEdit" parent="UI/Option4/VBoxContainer"]
+margin_top = 75.0
+margin_right = 168.0
+margin_bottom = 99.0
+hint_tooltip = "Enter Value Here"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PlayButton" type="Button" parent="UI"]
+margin_left = 152.0
+margin_top = 624.0
+margin_right = 344.0
+margin_bottom = 687.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="UI"]
+margin_left = 21.0
+margin_top = 31.0
+margin_right = 110.0
+margin_bottom = 87.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="ColorRect" parent="UI"]
+margin_left = 24.0
+margin_top = 389.0
+margin_right = 465.0
+margin_bottom = 607.0
+color = Color( 1, 0.933333, 0.866667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Discription" type="Node2D" parent="UI/Panel"]
+position = Vector2( 89.7969, 31.578 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="RichTextLabel" parent="UI/Panel/Discription"]
+margin_left = -98.0
+margin_top = -20.578
+margin_right = 358.0
+margin_bottom = 201.422
+custom_fonts/bold_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[b]Number of Players:[/b] the total number of players to spawn at start
+[b]Max Player Value:[/b] the highest value a player can be on board
+[b]Map Size:[/b] the size of the playable grid; 5, 6, and 8 are the available grid sizes
+[b]Number of Imminent Tiles:[/b] the number of tiles that can be moved upon only once at start"
+text = "Number of Players: the total number of players to spawn at start
+Max Player Value: the highest value a player can be on board
+Map Size: the size of the playable grid; 5, 6, and 8 are the available grid sizes
+Number of Imminent Tiles: the number of tiles that can be moved upon only once at start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="UI/Option1/VBoxContainer/PlayerNum" to="UI" method="_on_PlayerNum_text_changed"]
+[connection signal="text_changed" from="UI/Option2/VBoxContainer/MaxPlayerValue" to="UI" method="_on_MaxPlayerValue_text_changed"]
+[connection signal="text_changed" from="UI/Option3/VBoxContainer/MapSize" to="UI" method="_on_MapSize_text_changed"]
+[connection signal="text_changed" from="UI/Option4/VBoxContainer/ImmenentTileNum" to="UI" method="_on_ImmenentTileNum_text_changed"]
+[connection signal="pressed" from="UI/PlayButton" to="UI" method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="UI/BackButton" to="UI" method="_on_BackButton_pressed"]

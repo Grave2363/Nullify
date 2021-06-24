@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/UI/Root/Credits.gd" type="Script" id=2]
+[ext_resource path="res://icons/back/outline_arrow_back_black_24dp.png" type="Texture" id=3]
+[ext_resource path="res://icons/back/outline_arrow_back_black_pressed_24dp.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/Khula/Khula-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/Open_Sans/OpenSans-SemiBold.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 56
+font_data = ExtResource( 5 )
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 480.0
+margin_bottom = 720.0
+color = Color( 1, 0.933333, 0.866667, 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 440.0
+margin_bottom = 632.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsText" type="RichTextLabel" parent="Control"]
+margin_top = 136.0
+margin_right = 392.0
+margin_bottom = 592.0
+custom_fonts/bold_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+
+[node name="BackButton" type="TextureButton" parent="Control"]
+margin_right = 60.0
+margin_bottom = 54.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NullifyLabel" type="Label" parent="Control"]
+margin_left = 120.0
+margin_top = 56.0
+margin_right = 280.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.631373, 0.415686, 0.909804, 1 )
+text = "Nullify"
+[connection signal="pressed" from="Control/BackButton" to="." method="_on_BackButton_pressed"]
